@@ -42,8 +42,8 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         //getting user IPF
-        // $ip = request()->ip();
-        $ip = '1.1.0.255'; //For static IP address get
+        $ip = request()->ip();
+        // $ip = '1.33.184.196'; //For static IP address get
 
         // getting location data
         $userLocationData = \Location::get($ip);
